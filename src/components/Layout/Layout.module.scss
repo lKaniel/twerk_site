@@ -1,0 +1,14 @@
+@import "../../assets/css/variables";
+
+.Wrapper {
+  width: 100vw;
+  background: $light-color-0;
+
+  .Layout {
+    width: $container-width;
+    min-height: $layout-min-height;
+    margin: 0 auto;
+    max-width: $max-width;
+    overflow-x: hidden;
+  }
+}
