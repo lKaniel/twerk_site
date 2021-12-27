@@ -8,11 +8,13 @@ export function* mediaSagaWatcher() {
         window.addEventListener('online', emitter);
         return () => window.removeEventListener('online', emitter);
     });
+    yield takeEvery(onlineChannel, setOnline);
+
+
     const offlineChannel = eventChannel((emitter) => {
         window.addEventListener('offline', emitter);
         return () => window.removeEventListener('offline', emitter);
     });
-    yield takeEvery(onlineChannel, setOnline);
     yield takeEvery(offlineChannel, setOffline);
 }
 

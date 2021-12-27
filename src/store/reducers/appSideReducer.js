@@ -5,7 +5,7 @@ const initialState = {
     isOnline: true
 };
 
-export default function graphReducer(state = initialState, action) {
+export default function appSideReducer(state = initialState, action) {
     switch (action.type) {
         case SET_ONLINE_CLIENT_STATUS:
             return {
