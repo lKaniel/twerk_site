@@ -1,0 +1,16 @@
+@import "../../assets/css/variables";
+
+.Info{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  aspect-ratio: 16/9;
+
+  .Block{
+    background: $accent2-color;
+    border-radius: 2rem;
+  }
+}

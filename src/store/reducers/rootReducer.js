@@ -1,6 +1,6 @@
 import {combineReducers} from "redux";
-import graphReducer from "./tempReducer";
+import mediaReducer from "./mediaReducer";
 
 export default combineReducers({
-    graph: graphReducer
+    media: mediaReducer
 })

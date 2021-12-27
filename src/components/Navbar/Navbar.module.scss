@@ -1,12 +1,15 @@
 @import "../../assets/css/variables";
 
 .Navbar {
+  z-index: 999999;
+  position: fixed;
   width: 100%;
   height: $nav-height;
   //background: $nav-color;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: $light-color-0;
 
   .NavbarCenter {
     height: inherit;
@@ -61,37 +64,6 @@
       display: flex;
       align-items: center;
       justify-self: center;
-
-      .End-button{
-        font-size: 1.5rem;
-        border: 0;
-        border-radius: 1rem;
-        padding: 1rem;
-        height: 3rem;
-        background: $accent2-color;
-        display: flex;
-        align-items: center;
-        justify-self: center;
-        color: $light-color-0;
-        font-weight: 700;
-        cursor: pointer;
-        transform: scale(1);
-        transition: transform .1s ease-in-out;
-        box-shadow: 0 0 0px #7d564b;
-
-        &:hover{
-          background: #ffac95;
-          transform: scale(1.03);
-          box-shadow: 0 0 10px #ffac95;
-        }
-
-        &:active{
-          background: #ab7266;
-          transform: scale(0.97);
-          box-shadow: 0 0 0px #ffac95;
-        }
-
-      }
 
     }
   }

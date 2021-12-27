@@ -8,12 +8,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  //box-shadow: 0 0 10px black;
 
   .HeaderImg{
     position: relative;
     width: 100%;
     border-radius: 2rem;
     z-index: 10;
+    height: 60vh;
   }
 
   .HeaderInner{
@@ -21,15 +23,18 @@
     width: $container-width;
     max-width: $max-width;
     height: 100%;
-    background: rgba(0,0,0,.3);
+    background: linear-gradient(90deg, rgba(0,0,0,.7),rgba(0,0,0,.3));
     border-radius: 2rem;
     z-index: 20;
     color: $light-color-0;
     box-sizing: border-box;
     padding: 3rem;
 
-    .Title{
-
+    h2{
+      font-size: 3rem;
+    }
+    p{
+      font-size: 1.5rem;
     }
   }
 

@@ -4,7 +4,16 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`
+})
+
 module.exports = {
+    siteMetadata: {
+        title: "JuliaTwerk",
+        description: "Сайт для заннять з тверку"
+    },
     /* Your site config here */
     plugins: [
         {
@@ -12,26 +21,31 @@ module.exports = {
             options: {
                 // [required] - path to your createStore module
                 pathToCreateStoreModule: './src/store/createStore',
-                // [optional] - options passed to `serialize-javascript`
-                // info: https://github.com/yahoo/serialize-javascript#options
-                // will be merged with these defaults:
-                serialize: {
-                    space: 0,
-                    // if `isJSON` is set to `false`, `eval` is used to deserialize redux state,
-                    // otherwise `JSON.parse` is used
-                    isJSON: true,
-                    unsafe: false,
-                    ignoreFunction: true,
-                },
-                // [optional] - if true will clean up after itself on the client, default:
-                cleanupOnClient: true,
-                // [optional] - name of key on `window` where serialized state will be stored, default:
-                windowKey: '__PRELOADED_STATE__',
             },
         },
         `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`, // Needed for dynamic images,
-        `gatsby-plugin-sass`
+        `gatsby-plugin-sass`,
+        `gatsby-plugin-react-helmet`,
+        {
+            resolve: `gatsby-plugin-webfonts`,
+            options: {
+                fonts: {
+                    google: [
+                        {
+                            family: "Didact Gothic",
+                            variants: ["300", "400", "500", "600", "700"],
+                            subsets: ["latin", "cyrillic"]
+                        },
+                        {
+                            family: "Comfortaa",
+                            variants: ["400", "700"],
+                            subsets: ["latin", "cyrillic"]
+                        },
+                    ],
+                },
+            },
+        },
     ],
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import * as classes from "./Header.module.scss";
 import {StaticImage} from "gatsby-plugin-image";
+import Button from "../Button/Button";
 
 const Header = () => {
     return (
@@ -18,6 +19,9 @@ const Header = () => {
                 <p>
                     Ще щось дуже цікаве
                 </p>
+                <Button>
+                    Записатися
+                </Button>
             </div>
             <StaticImage
                 src={"../../assets/images/header.jpg"}
@@ -25,6 +29,7 @@ const Header = () => {
                 className={classes.HeaderImg}
                 placeholder={"tracedSVG"}
                 layout={"fullWidth"}
+                // aspectRatio={16/8}
             />
         </section>
     );

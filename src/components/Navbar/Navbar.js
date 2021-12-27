@@ -1,5 +1,6 @@
 import React from 'react';
 import * as classes from "./Navbar.module.scss"
+import Button from "../Button/Button";
 
 const Navbar = () => {
     return (
@@ -36,9 +37,9 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <div className={classes.EndWrap}>
-                    <button className={classes.EndButton}>
+                    <Button>
                         Записатися
-                    </button>
+                    </Button>
                 </div>
             </div>
 
