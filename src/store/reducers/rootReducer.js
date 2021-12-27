@@ -1,6 +1,6 @@
 import {combineReducers} from "redux";
-import mediaReducer from "./mediaReducer";
+import appSideReducer from "./appSideReducer";
 
 export default combineReducers({
-    media: mediaReducer
+    appSide: appSideReducer
 })
