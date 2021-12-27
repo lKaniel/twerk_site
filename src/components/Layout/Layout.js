@@ -5,12 +5,11 @@ import "normalize.css"
 import "../../assets/css/main.scss"
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import useOnlineStatus from "../../hooks/useOnlineStatus";
 import {useSelector} from "react-redux";
 
 
 const Layout = ({children}) => {
-    const isOnline = useSelector(state => state.media.isOnline)
+    const isOnline = useSelector(state => state.appSide.isOnline)
     return (
         <>
             <main className={classes.Wrapper}>
