@@ -7,21 +7,23 @@ const Header = () => {
     return (
         <section className={classes.Header}>
             <div className={classes.HeaderInner}>
-                <h2>
-                    Заняття з тверку
-                </h2>
-                <p>
-                    Від Юлії фівоалфіовало віоа оао аоа оао
-                </p>
-                <p>
-                    Ексклюзивні танці тфівлаоловал
-                </p>
-                <p>
-                    Ще щось дуже цікаве
-                </p>
-                <Button>
-                    Записатися
-                </Button>
+                <div>
+                    <h2>
+                        Заняття з тверку
+                    </h2>
+                    <p>
+                        Від Юлії фівоалфіовало віоа оао аоа оао
+                    </p>
+                    <p>
+                        Ексклюзивні танці тфівлаоловал
+                    </p>
+                    <p>
+                        Ще щось дуже цікаве
+                    </p>
+                    <Button>
+                        Записатися
+                    </Button>
+                </div>
             </div>
             <StaticImage
                 src={"../../assets/images/header.jpg"}
